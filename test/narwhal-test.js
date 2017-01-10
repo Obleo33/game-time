@@ -37,6 +37,7 @@ describe('Narwhal', function() {
       assert.equal(narwhal.tuskWidth, 1);
     });
 
+
     it('should have a default speed', function() {
       var narwhal = new Narwhal();
       assert.equal(narwhal.speed, 3);
