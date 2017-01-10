@@ -6,8 +6,6 @@ var Narwhal = require('../lib/narwhal');
 describe('Narwhal', function() {
   context('with default attributes', function() {
 
-    // var narwhal = new Narwhal({});
-
     it('should be a function', function () {
       assert.isFunction(Narwhal);
     });
@@ -61,9 +59,11 @@ describe('Narwhal', function() {
     it('if moveLeft is true, x should decrement by narwhal speed', function(){
       var narwhal = new Narwhal();
       assert.equal(narwhal.x, 435);
+      assert.equal(narwhal.tuskX, 450);
       narwhal.moveLeft = true;
       narwhal.updateNarwhal();
       assert.equal(narwhal.x, 432);
+      assert.equal(narwhal.tuskX, 447);
     });
 
     it('should have a property moveRight that defaults to false', function() {
@@ -74,9 +74,11 @@ describe('Narwhal', function() {
     it('if moveRight is true, x should increment by narwhal speed',function() {
       var narwhal = new Narwhal();
       assert.equal(narwhal.x, 435);
+      assert.equal(narwhal.tuskX, 450);
       narwhal.moveRight = true;
       narwhal.updateNarwhal();
       assert.equal(narwhal.x, 438);
+      assert.equal(narwhal.tuskX, 453);
     });
 
     it('should have a property flipperKick that defaults to false', function() {
@@ -87,9 +89,11 @@ describe('Narwhal', function() {
     it('if flipperKick is true, narwhal should move up by its speed', function() {
       var narwhal = new Narwhal();
       assert.equal(narwhal.y, 250);
+      assert.equal(narwhal.tuskY, 160);
       narwhal.flipperKick = true;
       narwhal.updateNarwhal();
       assert.equal(narwhal.y, 247);
+      assert.equal(narwhal.tuskY, 157);
     });
 
     it('should have a property burst that defaults to false', function() {
@@ -100,9 +104,11 @@ describe('Narwhal', function() {
     it('if burst is true, narwhal should move up 10x its speed', function() {
       var narwhal = new Narwhal();
       assert.equal(narwhal.y, 250);
+      assert.equal(narwhal.tuskY, 160);
       narwhal.burst = true;
       narwhal.updateNarwhal();
       assert.equal(narwhal.y, 220);
+      assert.equal(narwhal.tuskY, 130);
     });
 
     it('should have a detectCollision function', function() {
