@@ -158,7 +158,7 @@ describe('Narwhal', function() {
       assert.equal(narwhal.y, 250);
       swimUp(175, narwhal);
       narwhal.detectCollision();
-      assert.equal(narwhal.y, 125);
+      assert.equal(narwhal.y, 135);
     });
 
   });
