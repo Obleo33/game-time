@@ -24,6 +24,7 @@ h1 {
 }
 
 h5 {
+  color: #FFB5EE;
   font-family: 'Press Start 2P', sans-serif;
   font-size: 14px;
   text-align: center;
@@ -32,7 +33,6 @@ h5 {
 }
 
 .game-canvas {
-  /*border: 1px solid;*/
   font-family: 'Press Start 2P', cursive;
   margin: auto;
   display: block;
