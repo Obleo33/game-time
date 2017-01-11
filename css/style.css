@@ -23,6 +23,14 @@ h1 {
   background-color: black;
 }
 
+h5 {
+  font-family: 'Press Start 2P', sans-serif;
+  font-size: 14px;
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+}
+
 .game-canvas {
   /*border: 1px solid;*/
   font-family: 'Press Start 2P', cursive;
