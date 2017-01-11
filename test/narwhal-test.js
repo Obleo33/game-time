@@ -101,14 +101,14 @@ describe('Narwhal', function() {
       assert.equal(narwhal.burst, false);
     });
 
-    it('if burst is true, narwhal should move up 10x its speed', function() {
+    it('if burst is true, narwhal should move up 2x its speed', function() {
       var narwhal = new Narwhal();
       assert.equal(narwhal.y, 250);
       assert.equal(narwhal.tuskY, 160);
       narwhal.burst = true;
       narwhal.updateNarwhal();
-      assert.equal(narwhal.y, 220);
-      assert.equal(narwhal.tuskY, 130);
+      assert.equal(narwhal.y, 244);
+      assert.equal(narwhal.tuskY, 154);
     });
 
     it('should have a detectCollision function', function() {
