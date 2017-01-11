@@ -3,7 +3,7 @@ var assert = chai.assert;
 var canvas = {
   height:500,
   width:900
-}
+};
 
 var Seal = require('../lib/seal');
 
@@ -40,14 +40,14 @@ describe('Seal', function() {
       seal.x = 901;
       seal.speed = 1;
       seal.detectCollision();
-      assert.equal(seal.speed, -1)
+      assert.equal(seal.speed, -1);
     });
 
     it('should change direction if the x value is less than the canvas width', function(){
       seal.x = -1;
       seal.speed = -1;
       seal.detectCollision();
-      assert.equal(seal.speed, 1)
+      assert.equal(seal.speed, 1);
     });
 
     it('should have a turn fucntion', function(){
@@ -55,35 +55,34 @@ describe('Seal', function() {
     });
 
     it('should change direction if the count is 0', function(){
-      seal.speed = 1
-      seal.count = 0
+      seal.speed = 1;
+      seal.count = 0;
       seal.turn();
       assert.equal(seal.speed,-1);
     });
 
     it('should have a pointVal function', function(){
-      assert.isFunction(seal.pointVal)
+      assert.isFunction(seal.pointVal);
     });
 
     it('should have a point value of 25 if the speed equals the max speed', function(){
       var seal = new Seal({canvas:canvas, maxSpeed: 3, minSpeed: 1, speed: 3});
-      seal.speed = 3
-      console.log(seal.speed)
+      seal.speed = 3;
       seal.pointVal();
       assert.equal(seal.points,25);
     });
 
     it('should have a point value of 20 if the speed is inbetween the min and max speeds', function(){
       var seal = new Seal({canvas:canvas, maxSpeed: 3, minSpeed: 1, speed: 2});
-      seal.speed = 2
-      console.log(seal.speed)
+      seal.speed = 2;
+      console.log(seal.speed);
       seal.pointVal();
       assert.equal(seal.points,20);
     });
 
     it('should have a point value of 15 if the speed equals the min speed', function(){
       var seal = new Seal({canvas:canvas, maxSpeed: 3, minSpeed: 1, speed: 1});
-      console.log(seal.speed)
+      console.log(seal.speed);
       seal.pointVal();
       assert.equal(seal.points,15);
     });
